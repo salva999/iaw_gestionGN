@@ -82,9 +82,10 @@ DATABASES = {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.python'),
 	'ENGINE': 'mysql.connector.django',
-        'NAME': 'pythondb2',
+        'NAME': 'salva999$salva-django',
         'USER': 'salva',
         'PASSWORD': '891995',
+	'HOST': 'salva.mysql.pythonanywhere-services.com'
     }
 }
 
