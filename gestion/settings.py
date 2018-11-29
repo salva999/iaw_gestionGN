@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd$ug$)j1jhr2%z4gnpbc9^v^@4*sbu5we9nt_dtg72x7e+xq^('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['172.22.1.95']
+ALLOWED_HOSTS = ['www.python-web.org']
 
 
 # Application definition
@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'gestion.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.python'),
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.python'),
+	'ENGINE': 'mysql.connector.django',
+        'NAME': 'pythondb2',
+        'USER': 'salva',
+        'PASSWORD': '891995',
     }
 }
 
@@ -122,13 +126,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/iaw_gestionGN/static/'
 
-STATICFILES_DIRS = (
+#STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR,"static"),
-)
+#    os.path.join(BASE_DIR,"static"),
+#)
 
 
 
